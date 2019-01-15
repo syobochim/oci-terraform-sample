@@ -32,7 +32,7 @@ $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full destr
 - Dockerをインストールしておく
   - 各種ツールをインストールするのが面倒だったので、すべてのコマンドをDocker経由で実行している
 
-# 手順
+# 手順
 
 ## 0. ネットワークの設定をする
 
