@@ -32,13 +32,13 @@ $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full destr
 - Dockerをインストールしておく
   - 各種ツールをインストールするのが面倒だったので、すべてのコマンドをDocker経由で実行している
 
-# 手順
+# 手順
 
 ## 0. ネットワークの設定をする
 
 プロキシの設定をするか、プロキシを挟まないネットワークにアクセスする
 
-（私は公私混同パソコンなので、携帯とベアリングしてネットワークにアクセスしています。。。）
+（私は公私混同パソコンなので、携帯とベアリングして、プロキシのないネットワークにアクセスしています。。。）
 
 ## 1. API Keyを作成する
 
@@ -51,7 +51,7 @@ $ docker cp oci-api-key:/root/.oci/ key/
 
 keyディレクトリに`.oci`フォルダーがコピーされる。
 
-通常の手順で実行する場合は[こちら](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two
+通常の手順で実行する場合は[こちら](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two
 )
 
 ## 2. 作成したAPI KeyをOracle Cloudへ適用する
@@ -66,7 +66,7 @@ keyディレクトリに`.oci`フォルダーがコピーされる。
 - user_ocid
 - compartment_ocid
 - fingerprint
-
+
 ### tenancy_ocid
 
 Menu > Administration > Tenancy details
@@ -99,9 +99,9 @@ It looks something like this: `12:34:56:78:90:ab:cd:ef:12:34:56:78:90:ab:cd:ef`
 
 ## 4. sshキーを作成する
 
-sshキーを作成して、`key/.ssh/`ディレクトリに格納する
+sshキーを作成して、`key/.ssh/`ディレクトリに格納する
 
-sshキーの公開鍵の名前が`id_rsa.pub`でない場合は、`prod.auto.tfvars`ファイルの`ssh_public_key_path` を修正する
+sshキーの公開鍵の名前が`id_rsa.pub`でない場合は、`prod.auto.tfvars`ファイルの`ssh_public_key_path` を修正する
 
 sshログインする時は
 
