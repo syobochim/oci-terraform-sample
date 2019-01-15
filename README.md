@@ -34,6 +34,12 @@ $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full destr
 
 # 手順
 
+## 0. ネットワークの設定をする
+
+プロキシの設定をするか、プロキシを挟まないネットワークにアクセスする
+
+（私は公私混同パソコンなので、携帯とベアリングしてネットワークにアクセスしています。。。）
+
 ## 1. API Keyを作成する
 
 ```
