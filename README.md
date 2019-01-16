@@ -49,13 +49,12 @@ https://www.terraform.io/docs/providers/oci/index.html
 ```
 $ mkdir key
 $ docker build ./ -t oci-api-key
-$ docker run --name oci-api-key -it oci-api-key bash
+$ docker run --name oci-api-key -it oci-api-key
 $ docker cp oci-api-key:/root/.oci/ key/
-$ cat ./key/.oci/oci_api_key_public.pem
 ```
 
-keyディレクトリに`.oci`フォルダーがコピーされる。
-catでコンソール上にkeyを確認する。
+`docker run` 部分で API Key がコンソール上に出力されるためそれをコピペしておく。
+`docker cp` で keyディレクトリに`.oci`フォルダーがコピーされる。
 
 通常の手順で実行する場合は[こちら](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two
 )

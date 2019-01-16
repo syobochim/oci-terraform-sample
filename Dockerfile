@@ -18,4 +18,4 @@ RUN chmod go-rwx ~/.oci/oci_api_key.pem
 RUN openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
 
 
-CMD [ "python", "./your-daemon-or-script.py" ]
+CMD [ "cat", "/root/.oci/oci_api_key_public.pem" ]
