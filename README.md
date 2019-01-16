@@ -24,6 +24,10 @@ $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full destr
 
 （`terraform destroy`コマンドが実行される）
 
+# Oracle Cloud Infrastructure - Terraform Guide
+
+https://www.terraform.io/docs/providers/oci/index.html
+
 # 事前準備
 
 - Oracle CloudのCompartmentを作成しておく
