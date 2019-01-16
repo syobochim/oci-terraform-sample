@@ -51,9 +51,11 @@ $ mkdir key
 $ docker build ./ -t oci-api-key
 $ docker run --name oci-api-key -it oci-api-key bash
 $ docker cp oci-api-key:/root/.oci/ key/
+$ cat ./key/.oci/oci_api_key_public.pem
 ```
 
 keyディレクトリに`.oci`フォルダーがコピーされる。
+catでコンソール上にkeyを確認する。
 
 通常の手順で実行する場合は[こちら](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two
 )
