@@ -1,4 +1,4 @@
-[WIP]# どんな環境を作る？
+# [WIP]どんな環境を作る？
 
 Oracle Cloud
 
