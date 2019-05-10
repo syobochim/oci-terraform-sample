@@ -15,9 +15,23 @@ resource "oci_core_subnet" "demo_subnet_ap" {
   compartment_id = "${var.compartment_ocid}"
   availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[var.availability_domain - 1],"name")}"
   cidr_block = "172.16.1.0/24"
-  security_list_ids = ["${oci_core_vcn.demo_vcn.default_security_list_id}"]
+  security_list_ids = ["${oci_core_vcn.demo_vcn.default_security_list_id}", "${oci_core_security_list.demo_ap_security_list.id}"]
   route_table_id = "${oci_core_vcn.demo_vcn.default_route_table_id}"
   vcn_id = "${oci_core_vcn.demo_vcn.id}"
+}
+
+resource "oci_core_security_list" "demo_ap_security_list" {
+  compartment_id = "${var.compartment_ocid}"
+  vcn_id = "${oci_core_vcn.demo_vcn.id}"
+  display_name = "demo_ap_security_list"
+  ingress_security_rules {
+    protocol = "6" //TCP
+    source = "0.0.0.0/0"
+    tcp_options {
+      max = 80
+      min = 80
+    }
+  }
 }
 
 data "oci_identity_availability_domains" "ADs" {
