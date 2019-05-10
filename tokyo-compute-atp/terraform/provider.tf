@@ -5,7 +5,7 @@ variable "private_key_path" {}
 variable "compartment_ocid" {}
 variable "region" {}
 variable "ssh_public_key_path" {}
-
+variable "atp_admin_password" {}
 
 provider "oci" {
   region = "${var.region}"
