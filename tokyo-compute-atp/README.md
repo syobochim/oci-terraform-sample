@@ -1,8 +1,6 @@
-[WIP]# どんな環境を作る？
+# [WIP]どんな環境を作る？
 
-Oracle Cloud
-
-![](document/image/architecture.png)
+Oracle Cloud InfrastructureにてComputeとAutonomous Transaction Processingを作成する。
 
 # 環境を作成・更新するコマンド
 
