@@ -1,6 +1,7 @@
 # [WIP]どんな環境を作る？
 
 Oracle Cloud InfrastructureにてComputeとAutonomous Transaction Processingを作成する。
+事前に、「前提条件」および「初期設定の手順」を確認すること。
 
 # 環境を作成・更新するコマンド
 
@@ -22,7 +23,7 @@ $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full destr
 
 （`terraform destroy`コマンドが実行される）
 
-# 事前準備
+# 前提条件
 
 - Oracle CloudのCompartmentを作成しておく
 - sshできるツールを用意しておく
@@ -30,7 +31,7 @@ $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full destr
 - Dockerをインストールしておく
   - 各種ツールをインストールするのが面倒だったので、すべてのコマンドをDocker経由で実行している
 
-# 手順
+# 初期設定の手順
 
 ## 0. ネットワークの設定をする
 
