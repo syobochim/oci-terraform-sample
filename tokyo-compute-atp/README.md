@@ -4,7 +4,7 @@ Oracle Cloud InfrastructureにてComputeとAutonomous Transaction Processingを�
 
 # 環境を作成・更新するコマンド
 
-dockerから実行する場合、README.mdがあるディレクトリで
+dockerから実行する場合、tokyo-compute-atp配下のREADME.mdがあるディレクトリで
 
 ```
 $ docker run -it -v $PWD:/app/ -w /app/terraform/ hashicorp/terraform:full apply
