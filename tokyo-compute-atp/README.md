@@ -1,6 +1,8 @@
-# [WIP]どんな環境を作る？
+# どんな環境を作る？
 
 Oracle Cloud InfrastructureにてComputeとAutonomous Transaction Processingを作成する。
+
+![](document/image/architecture.png)
 
 # 環境を作成・更新するコマンド
 
